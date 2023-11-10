@@ -67,8 +67,253 @@ export const touhous = [
     image: "./assets/",
   },{
     id: 12,
-    name: "",
-    groupShort: "",
+    name: "Lunasa, Merlin, and Lyrica Prismriver",
+    groupShort: "pcb",
+    image: "./assets/",
+  },{
+    id: 13,
+    name: "Youmu Konpaku",
+    groupShort: "pcb",
+    image: "./assets/",
+  },{
+    id: 14,
+    name: "Yuyuko Saigyouji",
+    groupShort: "pcb",
+    image: "./assets/",
+  },{
+    id: 15,
+    name: "Yukari Yakumo",
+    groupShort: "pcb",
+    image: "./assets/",
+  },{
+    id: 16,
+    name: "Wriggle Nightbug",
+    groupShort: "in",
+    image: "./assets/",
+  },{
+    id: 17,
+    name: "Mystia Lorelai",
+    groupShort: "in",
+    image: "./assets/",
+  },{
+    id: 18,
+    name: "Keine Kamishirasawa",
+    groupShort: "in",
+    image: "./assets/",
+  },{
+    id: 19,
+    name: "Reisen Udongein Inaba",
+    groupShort: "in",
+    image: "./assets/",
+  },{
+    id: 20,
+    name: "Eirin Yagokoro",
+    groupShort: "in",
+    image: "./assets/",
+  },{
+    id: 21,
+    name: "Kaguya Houraisan",
+    groupShort: "in",
+    image: "./assets/",
+  },{
+    id: 22,
+    name: "Fujiwara no Mokou",
+    groupShort: "in",
+    image: "./assets/",
+  },{
+    id: 21,
+    name: "Medicine Melancholy",
+    groupShort: "pofv",
+    image: "./assets/",
+  },{
+    id: 23,
+    name: "Yuuka Kazami",
+    groupShort: "pofv",
+    image: "./assets/",
+  },{
+    id: 24,
+    name: "Komachi Onozuka",
+    groupShort: "pofv",
+    image: "./assets/",
+  },{
+    id: 25,
+    name: "Shikieiki Yamaxanadu",
+    groupShort: "pofv",
+    image: "./assets/",
+  },{
+    id: 26,
+    name: "Minoriko Aki",
+    groupShort: "mof",
+    image: "./assets/",
+  },{
+    id: 27,
+    name: "Hina Kagiyama",
+    groupShort: "mof",
+    image: "./assets/",
+  },{
+    id: 28,
+    name: "Nitori Kawashiro",
+    groupShort: "mof",
+    image: "./assets/",
+  },{
+    id: 29,
+    name: "Aya Shameimaru",
+    groupShort: "mof",
+    image: "./assets/",
+  },{
+    id: 30,
+    name: "Sanae Kochiya",
+    groupShort: "mof",
+    image: "./assets/",
+  },{
+    id: 31,
+    name: "Kanako Yasaka",
+    groupShort: "mof",
+    image: "./assets/",
+  },{
+    id: 32,
+    name: "Suwako Moriya",
+    groupShort: "mof",
+    image: "./assets/",
+  },{
+    id: 33,
+    name: "Yamame Kurodani",
+    groupShort: "sa",
+    image: "./assets/",
+  },{
+    id: 34,
+    name: "Parsee Mizuhashi",
+    groupShort: "sa",
+    image: "./assets/",
+  },{
+    id: 35,
+    name: "Yuugi Hoshiguma",
+    groupShort: "sa",
+    image: "./assets/",
+  },{
+    id: 36,
+    name: "Satori Komeiji",
+    groupShort: "sa",
+    image: "./assets/",
+  },{
+    id: 37,
+    name: "Rin Kaenbyou",
+    groupShort: "sa",
+    image: "./assets/",
+  },{
+    id: 38,
+    name: "Utsuho Reiuji",
+    groupShort: "sa",
+    image: "./assets/",
+  },{
+    id: 39,
+    name: "Koishi Komeiji",
+    groupShort: "sa",
+    image: "./assets/",
+  },{
+    id: 40,
+    name: "Nazrin",
+    groupShort: "sa",
+    image: "./assets/",
+  },{
+    id: 41,
+    name: "Kogasa Tatara",
+    groupShort: "sa",
+    image: "./assets/",
+  },{
+    id: 42,
+    name: "Ichirin Kumoi",
+    groupShort: "sa",
+    image: "./assets/",
+  },{
+    id: 43,
+    name: "Minamitsu Murasa",
+    groupShort: "sa",
+    image: "./assets/",
+  },{
+    id: 44,
+    name: "Shou Toramaru",
+    groupShort: "sa",
+    image: "./assets/",
+  },{
+    id: 45,
+    name: "Byakuren Hijiri",
+    groupShort: "sa",
+    image: "./assets/",
+  },{
+    id: 46,
+    name: "Nue Houjuu",
+    groupShort: "sa",
+    image: "./assets/",
+  },{
+    id: 47,
+    name: "Kyouko Kasodani",
+    groupShort: "td",
+    image: "./assets/",
+  },{
+    id: 48,
+    name: "Yoshika Miyako",
+    groupShort: "td",
+    image: "./assets/",
+  },{
+    id: 49,
+    name: "Seiga Kaku",
+    groupShort: "td",
+    image: "./assets/",
+  },{
+    id: 50,
+    name: "Soga no Tojiko",
+    groupShort: "td",
+    image: "./assets/",
+  },{
+    id: 51,
+    name: "Mononobe no Futo",
+    groupShort: "td",
+    image: "./assets/",
+  },{
+    id: 52,
+    name: "Toyosatomimi no Miko",
+    groupShort: "td",
+    image: "./assets/",
+  },{
+    id: 53,
+    name: "Mamizou Futatsuiwa",
+    groupShort: "td",
+    image: "./assets/",
+  },{
+    id: 55,
+    name: "Wakasagihime",
+    groupShort: "ddc",
+    image: "./assets/",
+  },{
+    id: 56,
+    name: "Sekibanki",
+    groupShort: "ddc",
+    image: "./assets/",
+  },{
+    id: 57,
+    name: "Kagerou Imaizumi",
+    groupShort: "ddc",
+    image: "./assets/",
+  },{
+    id: 58,
+    name: "Benben and Yatsuhashi Tsukumo",
+    groupShort: "ddc",
+    image: "./assets/",
+  },{
+    id: 59,
+    name: "Seija Kijin",
+    groupShort: "ddc",
+    image: "./assets/",
+  },{
+    id: 60,
+    name: "Shinmyoumaru Sukuna",
+    groupShort: "ddc",
+    image: "./assets/",
+  },{
+    id: 61,
+    name: "Raiko Hikawa",
+    groupShort: "ddc",
     image: "./assets/",
   }
 ]

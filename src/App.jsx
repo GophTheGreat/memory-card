@@ -8,6 +8,7 @@ function App() {
   const numCards = 8;
 
   const initialDraw = draw(numCards);
+  let usedCards = [];
 
   const [cards, setCards] = useState([
     {id: 1, props: initialDraw[0]},
