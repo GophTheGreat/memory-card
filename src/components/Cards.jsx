@@ -1,9 +1,14 @@
+/* eslint-disable react/prop-types */
 import "../styles/Cards.css"
 
-export default function Cards(props) {
+export default function Cards({ card }) {
+  const {name, groupShort, image} = card;
+  console.log(name);
+  
   return(
     <div className="card">
-      <p>card stuff</p>
+      <img src={image} width="200px" height="200px"></img>
+      <p>{name}</p>
     </div>
   )
 }

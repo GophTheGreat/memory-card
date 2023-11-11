@@ -2,33 +2,39 @@ import { useState } from "react";
 import "./styles/App.css";
 import Cards from "./components/Cards";
 import draw from "./utils";
+import { touhous } from "./data"
+import reimu from './reimu.png'
+import React from "react";
 
 function App() {
 
   const numCards = 8;
 
-  const initialDraw = draw(numCards);
+  const initialDraw = [touhous[0], touhous[1], touhous[2], touhous[3]]; //draw(numCards);
   let usedCards = [];
 
-  const [cards, setCards] = useState([
-    {id: 1, props: initialDraw[0]},
-    {id: 2, props: initialDraw[1]},
-    {id: 3, props: initialDraw[2]},
-    {id: 4, props: initialDraw[3]},
-    {id: 5, props: initialDraw[4]},
-    {id: 6, props: initialDraw[5]},
-    {id: 7, props: initialDraw[6]},
-    {id: 8, props: initialDraw[7]},
-  ]);
+  const [cards, setCards] = useState(initialDraw)
+  console.log(cards);
+  console.log(cards[0]);
+
+  // const [cards, setCards] = useState([
+  //   initialDraw[0],
+  //   initialDraw[1],
+  //   initialDraw[2],
+  //   initialDraw[3],
+  //   initialDraw[4],
+  //   initialDraw[5],
+  //   initialDraw[6],
+  //   initialDraw[7],
+  // ]);
 
   return (
     <>
-
       <h1>Memory Game</h1>
       <h3>Don't ever pick a card more than once. Try to score as high as you can!</h3>
     <main>
       {cards.map(card => (
-        <Cards key={card.id} props={card.props}/>
+        <Cards key={card.id} card={card}/>
       ))}
     </main>
 
