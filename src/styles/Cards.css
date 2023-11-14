@@ -1,38 +1,93 @@
 .card {
   border-radius: 12px;
   border: 2px solid black;
-  width: calc(25% - 1.5rem);
+  width: calc(20% - 1.5rem);
+  height: 40vh;
   margin: 0.5rem;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
+  transition: filter 0.5s;
+}
+
+.card:hover{
+  filter: drop-shadow(0px 0px 1rem rgb(240, 234, 146));
 }
 
 .cardImageContainer{ 
   width: 100%;
-  height: 70%;
+  flex: 1;
+  position: relative;
+  display: flex;
 }
 
 .cardDescContainer{
   background-color: rgb(13, 7, 17);
-  height: 100%;
-  width: 100%;
   text-shadow: 
   -1px -1px 0 #000, /* Top-left */
   1px -1px 0  #000, /* Top-right */
   -1px 1px 0  #000, /* Bottom-left */
   1px 1px 0   #000;
+  min-height: 60px;
+  max-height: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.cardName {
+  font-size:calc(9px + 0.390625vw);
+  margin: 0;
+  width: 100%;
+}
+
+.cardDesc, .cardDescMainCharacter {
+  font-size:calc(7px + 0.390625vw);
+  margin: 0;
 }
 
 .cardImage {
-  object-fit: cover;
+  position: absolute;
+  object-fit: contain;
   width: 100%;
   height: 100%;
+  bottom: 0;
+  left: 0;
+  align-self: flex-end;
 }
 
-.mainCharacterText {
+.cardDescMainCharacter{
   color: #fafafa00;
   -webkit-background-clip:text;
   background-clip:text;
   text-shadow: none;
+}
+
+@media (max-width: 800px) {
+  .card {
+    width: calc(25% - 1.5rem);
+    height: 30vh;
+  }
+
+  .cardName {
+    font-size:calc(8px + 0.390625vw);
+  }
+  .cardDesc, .cardDescMainCharacter {
+    font-size:calc(6px + 0.390625vw);
+  }
+}
+
+@media (max-width: 650px) {
+  .card {
+    width: calc(33% - 1.5rem);
+  }
+}
+
+@media (max-width: 450px) {
+  .card {
+    width: calc(50% - 1.5rem);
+  }
 }

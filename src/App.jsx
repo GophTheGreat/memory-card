@@ -6,7 +6,7 @@ import { touhous } from "./data"
 
 function App() {
 
-  const numCards = 8;
+  const numCards = 10;
   let usedCards = [];
 
   const initialState = draw(numCards, usedCards); //draw(numCards);
@@ -44,8 +44,10 @@ function App() {
 
   return (
     <>
-      <h1>Memory Game</h1>
-      <h3>Don't ever pick a card more than once. Try to score as high as you can!</h3>
+    <header>
+      <h1>Touhou Memory Game</h1>
+      <h3>Don&apos;t ever pick a card more than once. Try to score as high as you can!</h3>
+    </header>
     <main>
       {cards.map(card => (
         <Cards key={card.id} card={card}/>

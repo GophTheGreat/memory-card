@@ -34,12 +34,12 @@ function Cards({ card }) {
         <img className="cardImage" src={image} alt={name}></img>
       </div>
       <div className="cardDescContainer">
-        <p style={{color:'white',textShadow:'none'}}>{name}</p>
+        <p className="cardName" style={{color:'white',textShadow:'none'}}><b>{name}</b></p>
         {/* The main character's names are in a special gradient */}
         {groupShort === 'main' ? (
-          <p className="mainCharacterText" style={{backgroundImage:group.backgroundImage}}><b>{group.name}</b></p>
+          <p className="cardDescMainCharacter" style={{backgroundImage:group.backgroundImage}}><b>{group.name}</b></p>
         ):(
-          <p style={gameTitleStyle}><b>{group.name}</b></p>
+          <p className="cardDesc" style={gameTitleStyle}><b>{group.name}</b></p>
         )}
 
       </div>

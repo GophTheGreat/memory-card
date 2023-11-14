@@ -1,7 +1,7 @@
 #root {
   max-width: 90vw;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 
@@ -9,5 +9,18 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
 
+header {
+  height: auto;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+header h3 {
+  margin: 0;
+  font-size: 15px;
 }
