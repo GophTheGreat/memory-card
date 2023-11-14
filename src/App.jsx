@@ -9,9 +9,25 @@ function App() {
   const numCards = 8;
   let usedCards = [];
 
-  const initialDraw = draw(numCards, usedCards); //draw(numCards);
+  const initialState = draw(numCards, usedCards); //draw(numCards);
+  const initialDraw = initialState.drawnCards;
+  usedCards = initialState.localUsed;
+
+  console.log("Used cards = ");
+  console.log(usedCards)
 
   const [cards, setCards] = useState(initialDraw)
+  let score = 0;
+  const groupScoreeosd = 0;
+  const groupScorepcb = 0;
+  const groupScorein = 0;
+  const groupScorepofv = 0;
+  const groupScoremof = 0;
+  const groupScoresa = 0;
+  const groupScoreufo = 0;
+  const groupScoretd = 0;
+  const groupScoreddc = 0;
+  //const groupScorelolk = 0;
   // console.log(cards);
   // console.log(cards[0]);
 

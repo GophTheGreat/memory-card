@@ -3,11 +3,36 @@
   border: 2px solid black;
   width: calc(25% - 1.5rem);
   margin: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cardImageContainer{ 
+  width: 100%;
+  height: 70%;
+}
+
+.cardDescContainer{
+  background-color: rgb(13, 7, 17);
+  height: 100%;
+  width: 100%;
+  text-shadow: 
+  -1px -1px 0 #000, /* Top-left */
+  1px -1px 0  #000, /* Top-right */
+  -1px 1px 0  #000, /* Bottom-left */
+  1px 1px 0   #000;
 }
 
 .cardImage {
-  border-radius: 12px;
   object-fit: cover;
   width: 100%;
-  height: 70%;
+  height: 100%;
+}
+
+.mainCharacterText {
+  color: #fafafa00;
+  -webkit-background-clip:text;
+  background-clip:text;
+  text-shadow: none;
 }

@@ -332,7 +332,8 @@ export const groups = [{
   */
   shortHand: "main",
   name: "Main Character",
-  color: '#c3e7f3'
+  color: '#c3e7f3',
+  backgroundImage: 'linear-gradient(to bottom right, red, yellow)',
 }, {
   shortHand: "eosd",
   name: "Touhou 06 ~ Embodiment of Scarlet Devil",
@@ -344,11 +345,11 @@ export const groups = [{
 },{
   shortHand: "in",
   name: "Touhou 08 ~ Imperishable Night",
-  color: '#5b1283'
+  color: '#a635e3'
 },{
   shortHand: "pofv",
   name: "Touhou 09 ~ Phantasmagoria of Flower View",
-  color: '#5b1283'
+  color: '#6699ff'
 },{
   shortHand: "mof",
   name: "Touhou 10 ~ Mountain of Faith",

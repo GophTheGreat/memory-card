@@ -12,5 +12,19 @@ export default function draw(numCards, used) {
   }
   console.log("Draw complete");
   console.log(drawnCards);
-  return drawnCards;
+  return {drawnCards, localUsed};
+}
+
+export function isColorDarker(hexColor, threshold) {
+  // Convert hex to RGB
+  const r = parseInt(hexColor.slice(1, 3), 16);
+  const g = parseInt(hexColor.slice(3, 5), 16);
+  const b = parseInt(hexColor.slice(5, 7), 16);
+
+  // Calculate perceived brightness (using the standard luminance formula)
+  const brightness = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+  console.log(brightness);
+
+  // Compare brightness to the threshold
+  return brightness < threshold;
 }
