@@ -3,19 +3,17 @@ import "./styles/App.css";
 import Cards from "./components/Cards";
 import draw from "./utils";
 import { touhous } from "./data"
-import reimu from './reimu.png'
-import React from "react";
 
 function App() {
 
   const numCards = 8;
-
-  const initialDraw = [touhous[0], touhous[1], touhous[2], touhous[3]]; //draw(numCards);
   let usedCards = [];
 
+  const initialDraw = draw(numCards, usedCards); //draw(numCards);
+
   const [cards, setCards] = useState(initialDraw)
-  console.log(cards);
-  console.log(cards[0]);
+  // console.log(cards);
+  // console.log(cards[0]);
 
   // const [cards, setCards] = useState([
   //   initialDraw[0],

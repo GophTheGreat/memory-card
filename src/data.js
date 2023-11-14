@@ -304,7 +304,7 @@ export const touhous = [
     id: 59,
     name: "Benben and Yatsuhashi Tsukumo",
     groupShort: "ddc",
-    image: "../src/assets/ddc/tsukumosisters.png",
+    image: "../src/assets/ddc/tsukumo.png",
   },{
     id: 60,
     name: "Seija Kijin",
@@ -316,7 +316,7 @@ export const touhous = [
     groupShort: "ddc",
     image: "../src/assets/ddc/sukuna.png",
   },{
-    id: 612,
+    id: 62,
     name: "Raiko Hikawa",
     groupShort: "ddc",
     image: "../src/assets/ddc/raiko.png",
@@ -332,52 +332,54 @@ export const groups = [{
   */
   shortHand: "main",
   name: "Main Character",
-  color: 0x00000
+  color: '#c3e7f3'
 }, {
   shortHand: "eosd",
   name: "Touhou 06 ~ Embodiment of Scarlet Devil",
-  color: 0xfd3e22
+  color: '#fd3e22'
 },{
   shortHand: "pcb",
   name: "Touhou 07 ~ Perfect Cherry Blossom",
-  color: 0xffc4ff
+  color: '#ffc4ff'
 },{
   shortHand: "in",
   name: "Touhou 08 ~ Imperishable Night",
-  color: 0x5b1283
+  color: '#5b1283'
 },{
   shortHand: "pofv",
   name: "Touhou 09 ~ Phantasmagoria of Flower View",
-  color: 0x5b1283
+  color: '#5b1283'
 },{
   shortHand: "mof",
   name: "Touhou 10 ~ Mountain of Faith",
-  color: 0xffff99
+  color: '#ffff99'
 },{
   shortHand: "sa",
   name: "Touhou 11 ~ Subterranean Animism",
-  color: 0x968356
+  color: '#968356'
 },{
   shortHand: "ufo",
   name: "Touhou 12 ~ Undefined Fantastic Object",
-  color: 0xbcf9fe
+  color: '#bcf9fe'
 },{
   shortHand: "td",
   name: "Touhou 13 ~ Ten Desires",
-  color: 0xf8c807
+  color: '#f8c807'
 },{
-  shorthand: "ddc",
+  shortHand: "ddc",
   name: "Touhou 14 ~ Double Dealing Character",
-  color: 0xac3333
-  }
+  color: '#ac3333'
+}
+
+]
 //,{
 //   shorthand: "lolk",
 //   name: "Touhou 15 ~ Legacy of Lunatic Kingdom",
-//   color: 0xe7dced
+//   color: '#e7dced
 // },{
 //   shorthand: "hsifs",
 //   name: "Touhou 16 ~ Hidden Star in Four Seasons",
-//   color: 0xefe969
+//   color: '#efe969
 // },{
 //  shorthand: "wbawc",
 //  name: "Touhou 17 ~ Wily Beast and Weakest Creature",
@@ -391,4 +393,3 @@ export const groups = [{
 //   name: "Touhou 19 ~ Unfinished Dream of All Living Ghost",
 //   color: 0x537e38
 // }
-]
