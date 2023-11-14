@@ -19,7 +19,16 @@
   width: 100%;
   flex: 1;
   position: relative;
-  display: flex;
+}
+
+.cardImage {
+  position: absolute;
+  object-fit: cover;
+  width: auto;
+  height: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .cardDescContainer{
@@ -47,16 +56,6 @@
 .cardDesc, .cardDescMainCharacter {
   font-size:calc(7px + 0.390625vw);
   margin: 0;
-}
-
-.cardImage {
-  position: absolute;
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
-  bottom: 0;
-  left: 0;
-  align-self: flex-end;
 }
 
 .cardDescMainCharacter{
