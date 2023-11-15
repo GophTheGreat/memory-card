@@ -1,23 +1,20 @@
 import { useState } from "react";
 import "./styles/App.css";
 import Cards from "./components/Cards";
+import Score from "./components/Score";
 import draw from "./utils";
-import { touhous } from "./data"
 
 function App() {
 
   const numCards = 10;
-  let usedCards = [];
 
-  const initialState = draw(numCards, usedCards); //draw(numCards);
-  const initialDraw = initialState.drawnCards;
-  usedCards = initialState.localUsed;
+  const initialDraw = draw(numCards, []); //draw(numCards);
 
-  console.log("Used cards = ");
-  console.log(usedCards)
-
+  const [pickedCards, setPickedCards] = useState([])
   const [cards, setCards] = useState(initialDraw)
-  let score = 0;
+  const [scoreData, setScoreData] = useState({score: 0});
+  console.log(scoreData);
+
   const groupScoreeosd = 0;
   const groupScorepcb = 0;
   const groupScorein = 0;
@@ -27,30 +24,38 @@ function App() {
   const groupScoreufo = 0;
   const groupScoretd = 0;
   const groupScoreddc = 0;
-  //const groupScorelolk = 0;
-  // console.log(cards);
-  // console.log(cards[0]);
 
-  // const [cards, setCards] = useState([
-  //   initialDraw[0],
-  //   initialDraw[1],
-  //   initialDraw[2],
-  //   initialDraw[3],
-  //   initialDraw[4],
-  //   initialDraw[5],
-  //   initialDraw[6],
-  //   initialDraw[7],
-  // ]);
+  function handleClick(card){
+    console.log("clicked a card", card)
+    //First verify whether the card has been picked before TODO
+
+    //If false
+      //Increment score
+      //Push new card to pickedCards, THEN
+       //Draw again and update state
+      setScoreData((oldData) => ({score:oldData.score + 1}));
+      
+      setPickedCards(prevCards => {
+        const newCards = [...prevCards, card];
+        console.log("Picked cards are: ", newCards);
+        return newCards;
+      });
+      
+      setCards(draw(numCards, pickedCards))
+
+    //End game if true
+  }
 
   return (
     <>
     <header>
       <h1>Touhou Memory Game</h1>
       <h3>Don&apos;t ever pick a card more than once. Try to score as high as you can!</h3>
+      <Score scoreData={scoreData}/>
     </header>
     <main>
       {cards.map(card => (
-        <Cards key={card.id} card={card}/>
+        <Cards key={card.id} card={card} onClick={handleClick}/>
       ))}
     </main>
 
