@@ -1,15 +1,17 @@
+const imagePath = import.meta.env.VITE_REACT_APP_IMAGE_PATH;
+
 export const touhous = [
   /*Template
     id: ,
     name: "",
     groupShort: "",
-    image: "../src/assets/",
+    image: "imagePath + "assets/",
     */
   {
     id: 0,
     name: "Reimu Hakurei",
     groupShort: "main",
-    image: "../src/assets/main/reimu.png",
+    image: imagePath + "main/reimu.png",
   },{
     id: 1,
     name: "Marisa Kirisame",
