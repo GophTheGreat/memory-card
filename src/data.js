@@ -69,7 +69,7 @@ export const touhous = [
     id: 12,
     name: "Lunasa, Merlin, and Lyrica Prismriver",
     groupShort: "pcb",
-    image: "../src/assets/pcb/prismrivers.png", /*TODO make Prismriver.png*/
+    image: "../src/assets/pcb/prismriver.png"
   },{
     id: 13,
     name: "Youmu Konpaku",

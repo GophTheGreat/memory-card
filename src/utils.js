@@ -6,7 +6,7 @@ export default function draw(numCards, pickedCards) {
   while(drawnCards.length < numCards){
     const rNum = Math.floor(Math.random() * touhous.length);
     //Only push a new card if it's not already in hand
-    if(!drawnCards.find(card => card === touhous[rNum])){
+    if(!drawnCards.includes(touhous[rNum])){
       drawnCards.push(touhous[rNum])
     }
     //When we reach the draw length,
@@ -24,6 +24,16 @@ export default function draw(numCards, pickedCards) {
   return drawnCards;
 }
 
+export function hasCardBeenPickedBefore(card, pickedCards){
+  console.log("Checking card against picked cards", card, pickedCards)
+  if(pickedCards.includes(card)){
+    console.log("Card has been picked before!");
+    return true;
+  }
+  console.log("Card has NOT been picked before. Good.");
+  return false;
+}
+
 export function verifySetHasOneValid(draw, pickedCards){
   console.log("Verifying against picked set: ", pickedCards)
   if(pickedCards.length === 0){
@@ -34,7 +44,7 @@ export function verifySetHasOneValid(draw, pickedCards){
   //If at least one of them can't be found in the picked set
     //set doWeHaveAtLeastOneUnpickedCard = true;
   for(let i = 0; i < draw.length; i++){
-    if(!pickedCards.find(card => card === draw[i])){
+    if(!pickedCards.includes(draw[i])){
       doWeHaveAtLeastOneUnpickedCard = true;
       console.log("Good set")
     }
