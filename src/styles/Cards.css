@@ -55,7 +55,7 @@
 
 .cardDesc, .cardDescMainCharacter {
   font-size:calc(7px + 0.390625vw);
-  margin: 0;
+  margin: 2px;
 }
 
 .cardDescMainCharacter{
