@@ -15,19 +15,19 @@ function App() {
 
   const [pickedCards, setPickedCards] = useState([])
   const [cards, setCards] = useState(initialDraw)
-  const [scoreData, setScoreData] = useState({score: 0});
+  const [scoreData, setScoreData] = useState({score: 0, 
+                                              groupScoreeosd:0,
+                                              groupScorepcb:0,
+                                              groupScorein:0,
+                                              groupScorepofv:0,
+                                              groupScoremof:0,
+                                              groupScoresa:0,
+                                              groupScoreufo:0,
+                                              groupScoretd:0,
+                                              groupScoreddc:0
+                                            });
   const [isGameOver, setIsGameOver] = useState(false);
   console.log(scoreData);
-
-  const groupScoreeosd = 0;
-  const groupScorepcb = 0;
-  const groupScorein = 0;
-  const groupScorepofv = 0;
-  const groupScoremof = 0;
-  const groupScoresa = 0;
-  const groupScoreufo = 0;
-  const groupScoretd = 0;
-  const groupScoreddc = 0;
 
   function handleClick(card){
     console.log("clicked a card", card)
@@ -37,8 +37,17 @@ function App() {
       setIsGameOver(true);
       return;
     }
+    //todo handle group score data
+    setScoreData((oldData) => {
+      let newScore = {...oldData}
 
-    setScoreData((oldData) => ({score:oldData.score + 1}));
+      const groupScoreKey = `groupScore${card.groupShort}`;
+      newScore[groupScoreKey] += 1;
+      newScore.score += 1;
+      
+      return newScore;
+    });
+    
     setPickedCards(prevCards => {
       const newCards = [...prevCards, card];
       console.log("Picked cards are: ", newCards);

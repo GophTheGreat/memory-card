@@ -18,7 +18,8 @@ function Cards({ card, onClick }) {
     bgStyle={backgroundColor: group.color}
     gameTitleStyle={color: group.color};
     //Adds a white outline to text that is too dark
-    //Honestly just make the base color brighter if so
+    //Honestly just make the base color brighter if this happens
+    //The effect is so ugly
     if(isColorDarker(group.color, 0.25)){
       // console.log(isColorDarker(group.color, 0.45))
       gameTitleStyle.textShadow=`-1px -1px 0 #fff, 1px -1px 0  #fff,-1px 1px 0  #fff,1px 1px 0   #fff`;
