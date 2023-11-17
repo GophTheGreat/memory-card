@@ -26,8 +26,6 @@ function Cards({ card, onClick }) {
       // console.log(gameTitleStyle);
     }
   }
-  // console.log("Color is " + group.color)
-
   
   return(
     <div className="card" onClick = {() => onClick(card)}>

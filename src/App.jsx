@@ -16,6 +16,7 @@ function App() {
   const [pickedCards, setPickedCards] = useState([])
   const [cards, setCards] = useState(initialDraw)
   const [scoreData, setScoreData] = useState({score: 0, 
+                                              groupScoremain:0,
                                               groupScoreeosd:0,
                                               groupScorepcb:0,
                                               groupScorein:0,
@@ -37,7 +38,7 @@ function App() {
       setIsGameOver(true);
       return;
     }
-    //todo handle group score data
+
     setScoreData((oldData) => {
       let newScore = {...oldData}
 
@@ -47,7 +48,7 @@ function App() {
       
       return newScore;
     });
-    
+
     setPickedCards(prevCards => {
       const newCards = [...prevCards, card];
       console.log("Picked cards are: ", newCards);

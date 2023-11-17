@@ -326,51 +326,62 @@ export const touhous = [
 ]
 
 
-export const groups = [{
-  /*Template
+export const groups = [
+    /*Template
   shortHand: "",
   name: "",
   color: 0x
   */
+{
   shortHand: "main",
-  name: "Main Character",
+  name: "Protagonists",
+  scoreName: "Protagonists",
   color: '#c3e7f3',
   backgroundImage: 'linear-gradient(to bottom right, red, yellow)',
 }, {
   shortHand: "eosd",
   name: "Touhou 06 ~ Embodiment of Scarlet Devil",
+  scoreName: "Touhou 06 Characters",
   color: '#fd3e22'
 },{
   shortHand: "pcb",
   name: "Touhou 07 ~ Perfect Cherry Blossom",
+  scoreName: "Touhou 07 Characters",
   color: '#ffc4ff'
 },{
   shortHand: "in",
   name: "Touhou 08 ~ Imperishable Night",
+  scoreName: "Touhou 08 Characters",
   color: '#a635e3'
 },{
   shortHand: "pofv",
   name: "Touhou 09 ~ Phantasmagoria of Flower View",
+  scoreName: "Touhou 09 Characters",
   color: '#6699ff'
 },{
   shortHand: "mof",
   name: "Touhou 10 ~ Mountain of Faith",
+  scoreName: "Touhou 10 Characters",
   color: '#ffff99'
 },{
   shortHand: "sa",
   name: "Touhou 11 ~ Subterranean Animism",
+  scoreName: "Touhou 11 Characters",
   color: '#968356'
 },{
   shortHand: "ufo",
   name: "Touhou 12 ~ Undefined Fantastic Object",
+  scoreName: "Touhou 12 Characters",
   color: '#bcf9fe'
 },{
   shortHand: "td",
   name: "Touhou 13 ~ Ten Desires",
+  scoreName: "Touhou 13 Characters",
   color: '#f8c807'
 },{
   shortHand: "ddc",
   name: "Touhou 14 ~ Double Dealing Character",
+  scoreName: "Touhou 14 Characters",
   color: '#ac3333'
 }
 
