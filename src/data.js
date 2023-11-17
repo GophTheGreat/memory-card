@@ -69,7 +69,7 @@ export const touhous = [
     image: imagePath + "/pcb/alice.png",
   },{
     id: 12,
-    name: "Lunasa, Merlin, and Lyrica Prismriver",
+    name: "Lunasa, Lyrica, and Merlin Prismriver",
     groupShort: "pcb",
     image: imagePath + "/pcb/prismriver.png"
   },{
@@ -323,6 +323,7 @@ export const touhous = [
     groupShort: "ddc",
     image: imagePath + "/ddc/raiko.png",
   }
+
 ]
 
 
@@ -367,7 +368,7 @@ export const groups = [
   shortHand: "sa",
   name: "Touhou 11 ~ Subterranean Animism",
   scoreName: "Touhou 11 Characters",
-  color: '#968356'
+  color: '#32b354'
 },{
   shortHand: "ufo",
   name: "Touhou 12 ~ Undefined Fantastic Object",

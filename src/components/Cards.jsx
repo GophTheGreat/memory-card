@@ -5,12 +5,11 @@ import { isColorDarker } from "../utils";
 
 function Cards({ card, onClick }) {
   const {name, groupShort, image} = card;
-  // console.log(card);
-  // console.log("groupShort = " + groupShort);
   const group = groups.find((obj) => obj.shortHand === groupShort)
-  // console.log(group);
+
   let bgStyle;
   let gameTitleStyle;
+  //The protagonists get a special background
   if(groupShort === 'main'){
     bgStyle={backgroundImage: group.backgroundImage};
   }
@@ -21,9 +20,7 @@ function Cards({ card, onClick }) {
     //Honestly just make the base color brighter if this happens
     //The effect is so ugly
     if(isColorDarker(group.color, 0.25)){
-      // console.log(isColorDarker(group.color, 0.45))
       gameTitleStyle.textShadow=`-1px -1px 0 #fff, 1px -1px 0  #fff,-1px 1px 0  #fff,1px 1px 0   #fff`;
-      // console.log(gameTitleStyle);
     }
   }
   
@@ -34,7 +31,7 @@ function Cards({ card, onClick }) {
       </div>
       <div className="cardDescContainer">
         <p className="cardName" style={{color:'white',textShadow:'none'}}><b>{name}</b></p>
-        {/* The main character's names are in a special gradient */}
+        {/* The protagonist's names are in a special gradient */}
         {groupShort === 'main' ? (
           <p className="cardDescMainCharacter" style={{backgroundImage:group.backgroundImage}}><b>{group.name}</b></p>
         ):(

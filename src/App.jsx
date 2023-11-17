@@ -5,6 +5,7 @@ import Score from "./components/Score";
 import Gameover from "./components/Gameover";
 import draw from "./utils";
 import { hasCardBeenPickedBefore } from "./utils";
+import { groups } from "./data";
 
 function App() {
 
@@ -12,26 +13,19 @@ function App() {
 
   const initialDraw = draw(numCards, []); //draw(numCards);
   let content;
+  let scoreObject = {}
+
+  groups.map(group => {
+    scoreObject.score = 0;
+    scoreObject[`groupScore${group.shortHand}`] = 0;
+  })
 
   const [pickedCards, setPickedCards] = useState([])
   const [cards, setCards] = useState(initialDraw)
-  const [scoreData, setScoreData] = useState({score: 0, 
-                                              groupScoremain:0,
-                                              groupScoreeosd:0,
-                                              groupScorepcb:0,
-                                              groupScorein:0,
-                                              groupScorepofv:0,
-                                              groupScoremof:0,
-                                              groupScoresa:0,
-                                              groupScoreufo:0,
-                                              groupScoretd:0,
-                                              groupScoreddc:0
-                                            });
+  const [scoreData, setScoreData] = useState({...scoreObject});
   const [isGameOver, setIsGameOver] = useState(false);
-  console.log(scoreData);
 
   function handleClick(card){
-    console.log("clicked a card", card)
     //First verify whether the card has been picked before
     //End game if true
     if(hasCardBeenPickedBefore(card, pickedCards)){
@@ -39,6 +33,8 @@ function App() {
       return;
     }
 
+    //If card has not been picked, update score
+    //and draw new cards
     setScoreData((oldData) => {
       let newScore = {...oldData}
 
@@ -55,9 +51,15 @@ function App() {
       return newCards;
     });
     setCards(draw(numCards, pickedCards))
-    
-
   }
+
+  function resetGame() {
+    setScoreData({...scoreObject})
+    setPickedCards([]);
+    setCards(draw(numCards, []));
+    setIsGameOver(false);
+  }
+
   console.log(isGameOver);
   if(isGameOver === false){
     content = 
@@ -66,7 +68,7 @@ function App() {
       ))
   } else {
     content = 
-      <Gameover scoreData={scoreData}/>
+      <Gameover scoreData={scoreData} resetGame={resetGame}/>
   }
   console.log(content);
 
@@ -75,6 +77,7 @@ function App() {
     <header>
       <h1>Touhou Memory Game</h1>
       <h3>Don&apos;t ever pick a card more than once. Try to score as high as you can!</h3>
+      <hr></hr>
       <Score scoreData={scoreData}/>
     </header>
     <main>
