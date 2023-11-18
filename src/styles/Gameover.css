@@ -11,6 +11,7 @@
   overflow: hidden;
   height: auto;
   flex-wrap: wrap;
+  margin-top: 0.5rem;
 }
 
 .scrollingCardGroup {
