@@ -11,7 +11,7 @@ export const touhous = [
     id: 0,
     name: "Reimu Hakurei",
     groupShort: "main",
-    image: imagePath + "main/reimu.png",
+    image: imagePath + "/main/reimu.png",
   },{
     id: 1,
     name: "Marisa Kirisame",

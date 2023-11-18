@@ -1,13 +1,27 @@
+.score {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
 .generalScoreWrapper {
   margin: 1rem;
   margin-top: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
 }
 
 .generalScore {
   margin: 0px;
+  display: flex;
+  text-align: center;
 }
-
 
 .groupScoreWrapper {
   display: flex;

@@ -2,4 +2,35 @@
   display: flex;
   flex-direction: column;
   justify-self: center;
+  flex: 1;
+}
+
+.scrollingCardsWrapper {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+.scrollingCardGroup {
+  width: 20%;
+}
+
+.endCardWrapper {
+  width: 100%;
+  height: 25vh;
+}
+
+.dimmed {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+
+@media (max-width: 1250px) {
+  .scrollingCardsWrapper {
+    display: none;
+  }
 }

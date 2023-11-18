@@ -39,7 +39,6 @@ function Cards({ card, onClick }) {
         )}
 
       </div>
-
     </div>
   )
 }

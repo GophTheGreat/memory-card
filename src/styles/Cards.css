@@ -1,17 +1,21 @@
+.gameCardWrapper {
+  width: calc(20% - 1.5rem);
+  height: 25vh;
+}
+
 .card {
   border-radius: 12px;
   border: 2px solid black;
-  width: calc(20% - 1.5rem);
-  height: 40vh;
   margin: 0.5rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   transition: filter 0.2s;
+  height: 100%;
 }
 
-.card:hover{
+.gameCardWrapper:hover{
   filter: drop-shadow(0px 0px 1rem rgb(241, 230, 63));
 }
 
@@ -65,12 +69,10 @@
   text-shadow: none;
 }
 
-@media (max-width: 800px) {
-  .card {
+@media (max-width: 1000px) {
+  .gameCardWrapper {
     width: calc(25% - 1.5rem);
-    height: 30vh;
   }
-
   .cardName {
     font-size:calc(8px + 0.390625vw);
   }
@@ -79,14 +81,14 @@
   }
 }
 
-@media (max-width: 650px) {
-  .card {
+@media (max-width: 700px) {
+  .gameCardWrapper {
     width: calc(33% - 1.5rem);
   }
 }
 
 @media (max-width: 450px) {
-  .card {
+  .gameCardWrapper {
     width: calc(50% - 1.5rem);
   }
 }

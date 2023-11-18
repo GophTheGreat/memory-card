@@ -3,6 +3,7 @@ import { touhous } from "./data";
 export default function draw(numCards, pickedCards) {
   console.log("drawing cards")
   let drawnCards = [];
+  let iterations = 0;
   while(drawnCards.length < numCards){
     const rNum = Math.floor(Math.random() * touhous.length);
     //Only push a new card if it's not already in hand
@@ -13,29 +14,26 @@ export default function draw(numCards, pickedCards) {
     //Check if there's at least one valid card
     //If not, reset the deck and draw again
     if(drawnCards.length === numCards){
-      if(!verifySetHasOneValid(drawnCards, pickedCards)){
+      if(verifySetHasOneValid(drawnCards, pickedCards) === false){
         console.log("Bad set, redrawing")
-        while(drawnCards.length > 0){drawnCards.pop()}
+        drawnCards = [];
       }
     }
+    if(iterations > 200){break;}
   }
-  console.log("Draw complete");
-  console.log(drawnCards);
+  console.log("Draw complete. Final draw is: ", drawnCards);
   return drawnCards;
 }
 
 export function hasCardBeenPickedBefore(card, pickedCards){
-  console.log("Checking card against picked cards", card, pickedCards)
   if(pickedCards.includes(card)){
-    console.log("Card has been picked before!");
     return true;
   }
-  console.log("Card has NOT been picked before. Good.");
   return false;
 }
 
 export function verifySetHasOneValid(draw, pickedCards){
-  console.log("Verifying against picked set: ", pickedCards)
+  console.log("Verifying draw against picked set: ", draw, pickedCards)
   if(pickedCards.length === 0){
     return true;
   }
