@@ -91,7 +91,7 @@ function App() {
     <>
     <header>
       <h1>Touhou Memory Game</h1>
-      <h3>Don&apos;t ever pick a card more than once. Try to score as high as you can!</h3>
+      <h3>Don&apos;t ever pick a character more than once. For every one you pick, you get a point. Try to score as high as you can!</h3>
     </header>
     <hr />
     <main>

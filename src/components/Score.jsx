@@ -22,7 +22,7 @@ export default function Score({scoreData}){
   return(
     <div className="score">
       <div className="generalScoreWrapper">
-        <p className="generalScore"><b>Overall Score is - {score} / {touhous.length}</b></p>
+        <p className="generalScore"><b> Character Score - {score} / {touhous.length}</b></p>
       </div>
       <div className="groupScoreWrapper">
         {groups.map(group => (
